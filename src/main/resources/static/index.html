@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#11100f"><meta name="description" content="Find your next favorite night out with Afterglow.">
+  <title>CineWatch — make a night of it</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <div id="authRoot" class="auth-gate" aria-live="polite"><div class="auth-loading">CineWatch <span>·</span> opening the box office</div></div>
+  <header class="topbar"><a class="brand" href="#home"><span class="brand-icon">◒</span><span>cinewatch<span class="brand-dot">.</span></span></a>
+    <nav><a class="active" href="#home">Discover</a><a href="#movies">Movies</a></nav>
+    <div class="header-actions"><label class="city-picker"><span>⌖</span><select id="citySelect" aria-label="Choose city"><option value="">Choose a city</option></select><span>⌄</span></label><button id="ticketsButton" class="tickets-link">My tickets <span>↗</span></button><button class="avatar" id="profileButton" aria-label="Account">A</button></div>
+  </header>
+  <main id="home">
+    <section class="hero"><div class="hero-copy"><div class="eyebrow"><span class="live-dot"></span> THE AFTER HOURS FILM GUIDE · <span id="heroCity">YOUR CITY</span></div><h1>Meet me<br>at the <em>movies.</em></h1><p>Find a film, pick a time, and leave the rest of the evening to chance.</p><a class="hero-cta" href="#movies">See what's playing <span>↘</span></a><div class="hero-foot"><span>FILMS AND SHOWTIMES FROM YOUR CINEMA LISTINGS</span><span>CINEWATCH · 01</span></div></div><div class="hero-art"><div class="hero-orbit orbit-one"></div><div class="hero-orbit orbit-two"></div><div class="hero-poster"><img id="featuredImage" src="" alt=""><div class="poster-caption"><span id="featuredLabel">FROM YOUR LINEUP</span><strong id="featuredTitle">Choose a film</strong><small id="featuredMeta">Cinema listings load from your database</small></div></div><div class="floating-note">CURRENT<br>LINEUP</div><div class="hero-number" id="featuredCount">—<span> / —</span></div></div></section>
+    <section id="movies" class="movies-section"><div class="section-heading"><div><div class="eyebrow">THE LINEUP</div><h2>Now showing<span class="brand-dot">.</span></h2></div><div class="filter-bar"><label class="search-box"><span>⌕</span><input id="searchInput" placeholder="Find your film" aria-label="Search movies"><kbd>/</kbd></label><select id="genreFilter" aria-label="Filter by genre"><option value="">All moods</option></select></div></div>
+      <div class="date-strip" id="dateStrip"></div><div id="movieGrid" class="movie-grid"><div class="loading">Setting the scene…</div></div>
+    </section>
+  </main>
+  <footer><a class="brand" href="#home"><span class="brand-icon">◒</span><span>cinewatch<span class="brand-dot">.</span></span></a><span>A little more cinema in your week.</span><span>© 2026 CineWatch CINEMA</span></footer>
+  <div id="modalRoot"></div><div id="toast" class="toast" role="status"></div>
+  <script src="/app.js" defer></script>
+</body></html>
